@@ -31,13 +31,8 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.all(5),
-        child: GridView.builder(
+        child: ListView.builder(
             itemCount: songlist.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              crossAxisSpacing: 2,
-              mainAxisSpacing: 2,
-            ),
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
                 onTap: () {
@@ -89,17 +84,14 @@ class HomePage extends StatelessWidget {
                   }
                 },
                 child: Card(
-                  child: Column(
+                  child: Row(
                     children: [
-                      SizedBox(
-                        height: 10,
-                      ),
                       Icon(
                         Icons.music_note,
-                        size: 25,
+                        size: 20,
                       ),
                       SizedBox(
-                        height: 30,
+                        width: 15,
                       ),
                       Text(
                         songlist[index],
