@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:musical_app/SongList.dart';
 
-import 'package:musical_app/ReaderScreen.dart';
+/*import 'package:musical_app/ReaderScreen.dart';*/
 
 void main() => runApp(MaterialApp(
       title: "Lyrics App",
@@ -8,7 +9,7 @@ void main() => runApp(MaterialApp(
       home: HomePage(),
     ));
 
-var songlist = [
+/*var songlist = [
   'song 1',
   'song 2',
   'song 3',
@@ -18,7 +19,7 @@ var songlist = [
   'song 7',
   'song 8',
   'song 9',
-];
+];*/
 
 class HomePage extends StatelessWidget {
   @override
@@ -29,7 +30,18 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Container(
+      body: ListView.builder(
+          itemCount: songList.length,
+          itemBuilder: (context, index) {
+            Song song = songList[index];
+            return Card(
+              child: ListTile(
+                title: Text(song.title),
+                leading: Icon(Icons.music_note),
+              ),
+            );
+          }),
+      /*body: Container(
         child: ListView.builder(
             padding: EdgeInsets.all(10),
             itemCount: songlist.length,
@@ -102,7 +114,7 @@ class HomePage extends StatelessWidget {
                 ),
               );
             }),
-      ),
+      ),*/
     );
   }
 }
