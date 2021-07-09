@@ -88,10 +88,10 @@ class HomePage extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.music_note,
-                        size: 20,
+                        size: 15,
                       ),
                       SizedBox(
-                        width: 15,
+                        width: 9,
                       ),
                       Text(
                         songlist[index],
