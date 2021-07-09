@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:musical_app/SongList.dart';
 
-/*import 'package:musical_app/ReaderScreen.dart';*/
+import 'package:musical_app/ReaderScreen.dart';
 
 void main() => runApp(MaterialApp(
       title: "Lyrics App",
@@ -36,8 +36,21 @@ class HomePage extends StatelessWidget {
             Song song = songList[index];
             return Card(
               child: ListTile(
-                title: Text(song.title),
+                title: Text(
+                  song.title,
+                  style: TextStyle(color: Colors.black),
+                ),
+                subtitle: Text(
+                  song.singerName,
+                  style: TextStyle(fontSize: 10, color: Colors.red),
+                ),
                 leading: Icon(Icons.music_note),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ReaderScreen(song)),
+                  );
+                },
               ),
             );
           }),
