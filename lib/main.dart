@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                 ),
                 subtitle: Text(
                   song.singerName,
-                  style: TextStyle(fontSize: 10, color: Colors.red),
+                  style: TextStyle(fontSize: 13, color: Colors.red),
                 ),
                 leading: Icon(Icons.music_note),
                 onTap: () {

@@ -24,7 +24,7 @@ class ReaderScreen extends StatelessWidget {
             initialUrl: 'about:blank',
             onWebViewCreated: (WebViewController webviewController) {
               _controller = webviewController;
-              if (song.title == 'perfect') _loadhtmlsong1();
+              if (song.title == 'Perfect') _loadhtmlsong1();
 
               if (song.title == 'Behos') _loadhtmlsong2();
 
