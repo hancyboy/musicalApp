@@ -99,7 +99,7 @@ _loadhtmlsong8() async {
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
-  }
+}
 
 _loadhtmlsong9() async {
   String fileText = await rootBundle.loadString("assets/song9.html");
