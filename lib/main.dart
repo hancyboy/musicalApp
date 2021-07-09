@@ -27,11 +27,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Lyrics App"),
         centerTitle: true,
-        backgroundColor: Color(0xFFB4161B),
+        backgroundColor: Colors.blue,
       ),
       body: Container(
-        padding: EdgeInsets.all(5),
         child: ListView.builder(
+            padding: EdgeInsets.all(10),
             itemCount: songlist.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
