@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:musical_app/SongList.dart';
+import 'package:musical_app/EnglishScreen.dart';
+import 'package:musical_app/HindiScreen.dart';
+import 'package:musical_app/NepaliScreen.dart';
+/*import 'package:musical_app/SongList.dart';
 
-import 'package:musical_app/ReaderScreen.dart';
+import 'package:musical_app/ReaderScreen.dart';*/
 
 void main() => runApp(MaterialApp(
       title: "Lyrics App",
@@ -20,8 +23,39 @@ void main() => runApp(MaterialApp(
   'song 8',
   'song 9',
 ];*/
-
 class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Lyrics App'),
+          centerTitle: true,
+          bottom: TabBar(indicatorWeight: 4.5, tabs: <Widget>[
+            Tab(
+              text: 'English Song',
+            ),
+            Tab(
+              text: 'Hindi Song',
+            ),
+            Tab(
+              text: 'Nepali Song',
+            )
+          ]),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            EnglishScreen(),
+            HindiScreen(),
+            NepaliScreen(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+/*class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +88,7 @@ class HomePage extends StatelessWidget {
               ),
             );
           }),
-      /*body: Container(
+      body: Container(
         child: ListView.builder(
             padding: EdgeInsets.all(10),
             itemCount: songlist.length,
@@ -127,7 +161,7 @@ class HomePage extends StatelessWidget {
                 ),
               );
             }),
-      ),*/
+      ),
     );
   }
-}
+}*/
