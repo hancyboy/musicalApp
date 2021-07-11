@@ -24,54 +24,53 @@ class ReaderScreen extends StatelessWidget {
             initialUrl: 'about:blank',
             onWebViewCreated: (WebViewController webviewController) {
               _controller = webviewController;
-              if (hsong.title == 'Perfect') _loadhtmlperfect();
+              if (hsong.title == 'Channa Mereya') _loadhtmlchannaMereya();
 
-              if (hsong.title == 'Love me') _loadhtmlloveme();
+              if (hsong.title == 'Dil ka Dariya') _loadhtmldilKaDariya();
 
-              if (hsong.title == 'Photography') _loadhtmlphotography();
+              if (hsong.title == 'Kabira') _loadhtmlkabira();
 
-              if (hsong.title == 'Happier') _loadhtmlhappier();
+              if (hsong.title == 'Namo Namo') _loadhtmlnamoNamo();
 
-              if (hsong.title == 'Friends') _loadhtmlfriends();
+              if (hsong.title == 'Humdard') _loadhtmlhumdard();
             }));
   }
 }
 
-_loadhtmlperfect() async {
+_loadhtmlchannaMereya() async {
   String fileText =
-      await rootBundle.loadString("assets/englishsong/perfect.html");
+      await rootBundle.loadString("assets/hindisong/channaMereya.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
 }
 
-_loadhtmlloveme() async {
+_loadhtmldilKaDariya() async {
   String fileText =
-      await rootBundle.loadString("assets/englishsong/love me.html");
+      await rootBundle.loadString("assets/hindisong/dilKaDariya.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
 }
 
-_loadhtmlphotography() async {
-  String fileText =
-      await rootBundle.loadString("assets/englishsong/photography.html");
+_loadhtmlkabira() async {
+  String fileText = await rootBundle.loadString("assets/hindisong/kabira.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
 }
 
-_loadhtmlhappier() async {
+_loadhtmlhumdard() async {
   String fileText =
-      await rootBundle.loadString("assets/englishsong/happier.html");
+      await rootBundle.loadString("assets/hindisong/humdard.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
 }
 
-_loadhtmlfriends() async {
+_loadhtmlnamoNamo() async {
   String fileText =
-      await rootBundle.loadString("assets/englishsong/friends.html");
+      await rootBundle.loadString("assets/hindisong/namoNamo.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
