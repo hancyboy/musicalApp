@@ -26,9 +26,9 @@ class ReaderScreen extends StatelessWidget {
               _controller = webviewController;
               if (esong.title == 'Perfect') _loadhtmlperfect();
 
-              if (esong.title == 'Love me') _loadhtmlloveMe();
+              if (esong.title == 'Love Me') _loadhtmlloveMe();
 
-              if (esong.title == 'Photography') _loadhtmlphotography();
+              if (esong.title == 'Photograph') _loadhtmlphotograph();
 
               if (esong.title == 'Happier') _loadhtmlhappier();
 
@@ -53,9 +53,9 @@ _loadhtmlloveMe() async {
       .toString());
 }
 
-_loadhtmlphotography() async {
+_loadhtmlphotograph() async {
   String fileText =
-      await rootBundle.loadString("assets/englishsong/photography.html");
+      await rootBundle.loadString("assets/englishsong/photograph.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
