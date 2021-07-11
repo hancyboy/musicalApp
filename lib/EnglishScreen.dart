@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ReaderScreen.dart';
-import 'SongList.dart';
+import 'EnglishReaderScreen.dart';
+import 'EnglishSongList.dart';
 
 class EnglishScreen extends StatelessWidget {
   @override
@@ -9,22 +9,23 @@ class EnglishScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: songList.length,
           itemBuilder: (context, index) {
-            Song song = songList[index];
+            ESong esong = songList[index];
             return Card(
               child: ListTile(
                 title: Text(
-                  song.title,
+                  esong.title,
                   style: TextStyle(color: Colors.black),
                 ),
                 subtitle: Text(
-                  song.singerName,
+                  esong.singerName,
                   style: TextStyle(fontSize: 13, color: Colors.red),
                 ),
                 leading: Icon(Icons.music_note),
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ReaderScreen(song)),
+                    MaterialPageRoute(
+                        builder: (context) => ReaderScreen(esong)),
                   );
                 },
               ),

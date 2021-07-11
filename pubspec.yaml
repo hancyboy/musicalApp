@@ -46,7 +46,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/englishsong/
+    - assets/hindisong/
+    - assets/nepalisong/
+
   
   #   - images/a_dot_ham.jpeg
 
