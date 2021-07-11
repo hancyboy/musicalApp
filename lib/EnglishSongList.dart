@@ -13,7 +13,7 @@ class ESong {
 List<ESong> songList = [
   ESong(title: 'Perfect', singerName: 'Annie Marie'),
   ESong(title: 'Love Me', singerName: 'Ellie Goulding'),
-  ESong(title: 'Photography', singerName: 'Ed Sheeran'),
+  ESong(title: 'Photograph', singerName: 'Ed Sheeran'),
   ESong(title: 'Happier', singerName: 'Ed Sheeran'),
   ESong(title: 'Friends', singerName: 'Annie Marie'),
 ];

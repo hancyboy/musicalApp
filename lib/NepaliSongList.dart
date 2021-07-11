@@ -13,5 +13,5 @@ List<NSong> songList = [
   NSong(title: 'Sathi', singerName: 'Sushant Kc'),
   NSong(title: 'Budi', singerName: '5:55'),
   NSong(title: 'Lajayera', singerName: 'Sujan Chapagain'),
-  NSong(title: 'Happier', singerName: 'Sujan chapagain, Bidhya Tiwari'),
+  NSong(title: 'Teenpatey', singerName: 'Sujan chapagain, Bidhya Tiwari'),
 ];
