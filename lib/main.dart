@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:musical_app/EnglishScreen.dart';
 import 'package:musical_app/HindiScreen.dart';
 import 'package:musical_app/NepaliScreen.dart';
-/*import 'package:musical_app/SongList.dart';
-
-import 'package:musical_app/ReaderScreen.dart';*/
+import 'package:musical_app/nav-drawer.dart';
 
 void main() => runApp(MaterialApp(
       title: "Lyrics App",
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       home: HomePage(),
     ));
 
@@ -18,9 +17,11 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        drawer: NavDrawer(),
         appBar: AppBar(
           title: Text('Lyrics App'),
           centerTitle: true,
+          backgroundColor: Colors.deepPurple,
           bottom: TabBar(indicatorWeight: 4.5, tabs: <Widget>[
             Tab(
               text: 'English Song',
