@@ -5,7 +5,9 @@ class About extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text("About Developer!"),
+          title: Center(
+            child: new Text('About Developer!'),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),

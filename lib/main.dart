@@ -11,6 +11,8 @@ void main() => runApp(MaterialApp(
       home: HomePage(),
     ));
 
+Color primaryColor = Colors.purple;
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,18 +23,33 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Lyrics App'),
           centerTitle: true,
-          backgroundColor: Colors.deepPurple,
-          bottom: TabBar(indicatorWeight: 4.5, tabs: <Widget>[
-            Tab(
-              text: 'English Song',
-            ),
-            Tab(
-              text: 'Hindi Song',
-            ),
-            Tab(
-              text: 'Nepali Song',
-            )
-          ]),
+          backgroundColor: primaryColor,
+          bottom: TabBar(indicatorWeight: 4.5, indicatorColor: Colors.white,
+              /*onTap: (index) {
+                switch (index) {
+                  case 0:
+                    primaryColor = Colors.purple;
+                    break;
+                  case 1:
+                    primaryColor = Colors.orange;
+                    break;
+                  case 2:
+                    primaryColor = Colors.blue;
+                    break;
+                  default:
+                }
+              },*/
+              tabs: <Widget>[
+                Tab(
+                  text: 'English Song',
+                ),
+                Tab(
+                  text: 'Hindi Song',
+                ),
+                Tab(
+                  text: 'Nepali Song',
+                )
+              ]),
         ),
         body: TabBarView(
           children: <Widget>[

@@ -36,7 +36,7 @@ class NavDrawer extends StatelessWidget {
             onTap: () => Utils.openEmail(toEmail: 'raiumesh470@gmail.com'),
           ),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
+            leading: Icon(Icons.airplay),
             title: Text('About'),
             onTap: () => {
               Navigator.push(
