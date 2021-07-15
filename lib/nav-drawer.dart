@@ -19,7 +19,7 @@ class NavDrawer extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-              color: Colors.deepPurple,
+              color: Colors.purple,
             ),
           ),
           ListTile(

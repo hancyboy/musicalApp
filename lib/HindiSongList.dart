@@ -8,7 +8,7 @@ class HSong {
   });
 }
 
-List<HSong> songList = [
+List<HSong> hsongList = [
   HSong(title: 'Channa Mereya', singerName: 'Arjit Singh'),
   HSong(title: 'Dil ka Dariya', singerName: 'Arjit Singh'),
   HSong(title: 'Kabira', singerName: 'Rekha Bhardwaj, Tochi Raina'),

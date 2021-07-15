@@ -7,9 +7,9 @@ class NepaliScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-          itemCount: songList.length,
+          itemCount: nsongList.length,
           itemBuilder: (context, index) {
-            NSong nsong = songList[index];
+            NSong nsong = nsongList[index];
             return Card(
               child: ListTile(
                 title: Text(

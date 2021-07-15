@@ -8,7 +8,7 @@ class NSong {
   });
 }
 
-List<NSong> songList = [
+List<NSong> nsongList = [
   NSong(title: 'Behos', singerName: 'Sushant Kc'),
   NSong(title: 'Sathi', singerName: 'Sushant Kc'),
   NSong(title: 'Budi', singerName: '5:55'),

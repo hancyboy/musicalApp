@@ -10,7 +10,7 @@ class ESong {
   });
 }
 
-List<ESong> songList = [
+List<ESong> esongList = [
   ESong(title: 'Perfect', singerName: 'Annie Marie'),
   ESong(title: 'Love Me', singerName: 'Ellie Goulding'),
   ESong(title: 'Photograph', singerName: 'Ed Sheeran'),

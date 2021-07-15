@@ -7,9 +7,9 @@ class HindiScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-          itemCount: songList.length,
+          itemCount: hsongList.length,
           itemBuilder: (context, index) {
-            HSong hsong = songList[index];
+            HSong hsong = hsongList[index];
             return Card(
               child: ListTile(
                 title: Text(

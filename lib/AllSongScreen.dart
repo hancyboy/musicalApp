@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
-import 'EnglishReaderScreen.dart';
-import 'EnglishSongList.dart';
+import 'AllSongList.dart';
+import 'AllSongReaderScreen.dart';
 
-class EnglishScreen extends StatelessWidget {
+class AllSongScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: Text(
+          'All songs',
+        ),
+        centerTitle: true,
+      ),
       body: ListView.builder(
-          itemCount: esongList.length,
+          itemCount: asongList.length,
           itemBuilder: (context, index) {
-            ESong esong = esongList[index];
+            ASong asong = asongList[index];
             return Card(
               child: ListTile(
                 title: Text(
-                  esong.title,
+                  asong.title,
                   style: TextStyle(color: Colors.black),
                 ),
                 subtitle: Text(
-                  esong.singerName,
+                  asong.singerName,
                   style: TextStyle(fontSize: 13, color: Colors.red),
                 ),
                 leading: Icon(Icons.music_note),
@@ -25,7 +32,7 @@ class EnglishScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => EnglishReaderScreen(esong)),
+                        builder: (context) => AllSongReaderScreen(asong)),
                   );
                 },
               ),

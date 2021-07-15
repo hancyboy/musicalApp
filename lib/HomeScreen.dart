@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musical_app/EnglishScreen.dart';
+import 'package:musical_app/AllSongScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 50,
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => EnglishScreen()));
+                    MaterialPageRoute(builder: (_) => AllSongScreen()));
               },
               color: Colors.purple,
               child: Row(

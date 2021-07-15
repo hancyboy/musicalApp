@@ -5,12 +5,11 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: Center(
-            child: Text(
-              "Welcome Page!",
-              textAlign: TextAlign.center,
-            ),
+          backgroundColor: Colors.purple,
+          title: Text(
+            "Welcome Page!",
           ),
+          centerTitle: true,
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
