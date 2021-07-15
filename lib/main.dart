@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:musical_app/EnglishScreen.dart';
-import 'package:musical_app/HindiScreen.dart';
-import 'package:musical_app/NepaliScreen.dart';
+import 'package:musical_app/songs/EnglishScreen.dart';
+import 'package:musical_app/songs/HindiScreen.dart';
+import 'package:musical_app/songs/NepaliScreen.dart';
 import 'package:musical_app/nav-drawer.dart';
+import 'package:musical_app/HomeScreen.dart';
 
 void main() => runApp(MaterialApp(
       title: "Lyrics App",
@@ -17,29 +18,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         drawer: NavDrawer(),
         appBar: AppBar(
           title: Text('Lyrics App'),
           centerTitle: true,
           backgroundColor: primaryColor,
-          bottom: TabBar(indicatorWeight: 4.5, indicatorColor: Colors.white,
-              /*onTap: (index) {
-                switch (index) {
-                  case 0:
-                    primaryColor = Colors.purple;
-                    break;
-                  case 1:
-                    primaryColor = Colors.orange;
-                    break;
-                  case 2:
-                    primaryColor = Colors.blue;
-                    break;
-                  default:
-                }
-              },*/
+          bottom: TabBar(
+              indicatorWeight: 4.5,
+              indicatorColor: Colors.white,
               tabs: <Widget>[
+                Tab(
+                  text: 'Home',
+                ),
                 Tab(
                   text: 'English Song',
                 ),
@@ -53,6 +45,7 @@ class HomePage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
+            HomeScreen(),
             EnglishScreen(),
             HindiScreen(),
             NepaliScreen(),
