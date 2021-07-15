@@ -25,7 +25,7 @@ class NepaliScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ReaderScreen(nsong)),
+                        builder: (context) => NepaliReaderScreen(nsong)),
                   );
                 },
               ),

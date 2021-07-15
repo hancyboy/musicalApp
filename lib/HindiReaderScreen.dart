@@ -8,9 +8,9 @@ import 'HindiSongList.dart';
 
 late WebViewController _controller;
 
-class ReaderScreen extends StatelessWidget {
+class HindiReaderScreen extends StatelessWidget {
   final HSong hsong;
-  ReaderScreen(this.hsong);
+  HindiReaderScreen(this.hsong);
 
   @override
   Widget build(BuildContext context) {

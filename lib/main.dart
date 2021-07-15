@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:musical_app/songs/EnglishScreen.dart';
-import 'package:musical_app/songs/HindiScreen.dart';
-import 'package:musical_app/songs/NepaliScreen.dart';
+import 'package:musical_app/EnglishScreen.dart';
+import 'package:musical_app/HindiScreen.dart';
+import 'package:musical_app/NepaliScreen.dart';
 import 'package:musical_app/nav-drawer.dart';
 import 'package:musical_app/HomeScreen.dart';
 

@@ -8,9 +8,9 @@ import 'NepaliSongList.dart';
 
 late WebViewController _controller;
 
-class ReaderScreen extends StatelessWidget {
+class NepaliReaderScreen extends StatelessWidget {
   final NSong nsong;
-  ReaderScreen(this.nsong);
+  NepaliReaderScreen(this.nsong);
 
   @override
   Widget build(BuildContext context) {

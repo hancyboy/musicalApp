@@ -25,7 +25,7 @@ class EnglishScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ReaderScreen(esong)),
+                        builder: (context) => EnglishReaderScreen(esong)),
                   );
                 },
               ),

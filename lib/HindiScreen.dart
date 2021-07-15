@@ -25,7 +25,7 @@ class HindiScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ReaderScreen(hsong)),
+                        builder: (context) => HindiReaderScreen(hsong)),
                   );
                 },
               ),

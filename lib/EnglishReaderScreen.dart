@@ -8,9 +8,9 @@ import 'package:musical_app/EnglishSongList.dart';
 
 late WebViewController _controller;
 
-class ReaderScreen extends StatelessWidget {
+class EnglishReaderScreen extends StatelessWidget {
   final ESong esong;
-  ReaderScreen(this.esong);
+  EnglishReaderScreen(this.esong);
 
   @override
   Widget build(BuildContext context) {
