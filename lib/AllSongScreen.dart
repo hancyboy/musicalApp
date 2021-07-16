@@ -16,6 +16,7 @@ class AllSongScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: asongList.length,
           itemBuilder: (context, index) {
+            asongList.sort((a, b) => a.title.compareTo(b.title));
             ASong asong = asongList[index];
             return Card(
               child: ListTile(

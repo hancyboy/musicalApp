@@ -9,6 +9,7 @@ class NepaliScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: nsongList.length,
           itemBuilder: (context, index) {
+            nsongList.sort((a, b) => a.title.compareTo(b.title));
             NSong nsong = nsongList[index];
             return Card(
               child: ListTile(

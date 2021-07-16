@@ -9,6 +9,7 @@ class HindiScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: hsongList.length,
           itemBuilder: (context, index) {
+            hsongList.sort((a, b) => a.title.compareTo(b.title));
             HSong hsong = hsongList[index];
             return Card(
               child: ListTile(

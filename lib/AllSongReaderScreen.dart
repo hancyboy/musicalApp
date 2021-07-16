@@ -14,7 +14,7 @@ class AllSongReaderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.purple,
           title: Text(asong.title),
           centerTitle: true,
         ),

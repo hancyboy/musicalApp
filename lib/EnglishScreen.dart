@@ -9,6 +9,7 @@ class EnglishScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: esongList.length,
           itemBuilder: (context, index) {
+            esongList.sort((a, b) => a.title.compareTo(b.title));
             ESong esong = esongList[index];
             return Card(
               child: ListTile(

@@ -16,7 +16,7 @@ class EnglishReaderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.purple,
           title: Text(esong.title),
           centerTitle: true,
         ),

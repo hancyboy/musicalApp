@@ -16,7 +16,7 @@ class NepaliReaderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.purple,
           title: Text(nsong.title),
           centerTitle: true,
         ),
