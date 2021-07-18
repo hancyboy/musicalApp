@@ -10,6 +10,8 @@ class Utils {
   static Future _launchUrl(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
+    } else {
+      print('could not launch $url');
     }
   }
 }
