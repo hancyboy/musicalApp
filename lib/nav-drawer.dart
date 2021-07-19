@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:musical_app/About.dart';
-import 'package:musical_app/Utils.dart';
+//import 'package:musical_app/Utils.dart';
 import 'package:musical_app/Welcome.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -32,10 +33,17 @@ class NavDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.border_color),
-            title: Text('Feedback'),
-            onTap: () => Utils.openEmail(toEmail: 'raiumesh470@gmail.com'),
-          ),
+              leading: Icon(Icons.border_color),
+              title: Text('Feedback'),
+              onTap: () async {
+                const url =
+                    'mailto:raiumesh470@gmail.com?subject=News&body=New%20plugin';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  print('could not launch $url');
+                }
+              }),
           ListTile(
             leading: Icon(Icons.airplay),
             title: Text('About'),
