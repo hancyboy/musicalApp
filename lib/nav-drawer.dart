@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musical_app/About.dart';
-//import 'package:musical_app/Utils.dart';
+import 'BouncyPageRoute.dart';
 import 'package:musical_app/Welcome.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -28,8 +28,7 @@ class NavDrawer extends StatelessWidget {
             leading: Icon(Icons.input),
             title: Text('Welcome'),
             onTap: () {
-              Navigator.push(context,
-                  new MaterialPageRoute(builder: (context) => new Welcome()));
+              Navigator.push(context, BouncyPageRoute(Welcome()));
             },
           ),
           ListTile(
@@ -47,10 +46,7 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.airplay),
             title: Text('About'),
-            onTap: () => {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => About()))
-            },
+            onTap: () => {Navigator.push(context, BouncyPageRoute(About()))},
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
