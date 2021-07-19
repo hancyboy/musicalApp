@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.musical_app">
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="musical_app"
         android:icon="@mipmap/launcher_icon">
@@ -32,6 +32,12 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <queries>
+            <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="*/*" />
+            </intent>
+            </queries>
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
