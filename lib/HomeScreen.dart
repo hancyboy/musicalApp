@@ -57,7 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 textColor: Colors.white,
-              )
+              ),
+              SizedBox(
+                height: 30,
+              ),
             ],
           ),
         ),
