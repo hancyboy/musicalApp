@@ -93,7 +93,38 @@ class AsongSearch extends SearchDelegate<ASong> {
 
   @override
   Widget buildResults(BuildContext context) {
-    return Container();
+    final mylist = asongList
+        .where((p) => (p.title.toLowerCase()).startsWith(query.toLowerCase()))
+        .toList();
+    return ListView.builder(
+        itemCount: mylist.length,
+        itemBuilder: (context, index) {
+          mylist.sort((a, b) => a.title.compareTo(b.title));
+          final ASong listitem = mylist[index];
+          return Card(
+              child: ListTile(
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  listitem.title,
+                ),
+                Text(
+                  listitem.singerName,
+                  style: TextStyle(color: Colors.red, fontSize: 13),
+                ),
+              ],
+            ),
+            leading: Icon(Icons.music_note),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => AllSongReaderScreen(listitem)),
+              );
+            },
+          ));
+        });
   }
 
   @override
