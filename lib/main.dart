@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:musical_app/AllSongList.dart';
 import 'package:musical_app/EnglishScreen.dart';
 import 'package:musical_app/HindiScreen.dart';
@@ -7,53 +8,64 @@ import 'package:musical_app/nav-drawer.dart';
 import 'package:musical_app/HomeScreen.dart';
 import 'AllSongReaderScreen.dart';
 
-void main() => runApp(MaterialApp(
-      title: "Lyrics App",
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: HomePage(),
-    ));
+void main() {
+  runApp(MaterialApp(
+    title: "Lyrics App",
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primarySwatch: Colors.deepPurple),
+    home: HomePage(),
+  ));
+}
 
 Color primaryColor = Colors.purple;
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ));
     return DefaultTabController(
       length: 4,
       child: Scaffold(
         drawer: NavDrawer(),
-        appBar: AppBar(
-          backgroundColor: primaryColor,
-          title: Container(
-            color: Colors.purple,
-            child: Center(child: Text('Music App')),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(90),
+          child: AppBar(
+            elevation: 0,
+            brightness: Brightness.dark,
+            backgroundColor: primaryColor,
+            title: Container(
+              color: Colors.purple,
+              child: Center(child: Text('Music App')),
+            ),
+            actions: <Widget>[
+              IconButton(
+                  onPressed: () {
+                    showSearch(context: context, delegate: AsongSearch());
+                  },
+                  icon: Icon(Icons.search))
+            ],
+            bottom: TabBar(
+                isScrollable: true,
+                indicatorWeight: 4.5,
+                indicatorColor: Colors.white,
+                tabs: <Widget>[
+                  Tab(
+                    text: 'Home',
+                  ),
+                  Tab(
+                    text: 'English Song',
+                  ),
+                  Tab(
+                    text: 'Hindi Song',
+                  ),
+                  Tab(
+                    text: 'Nepali Song',
+                  )
+                ]),
           ),
-          actions: <Widget>[
-            IconButton(
-                onPressed: () {
-                  showSearch(context: context, delegate: AsongSearch());
-                },
-                icon: Icon(Icons.search))
-          ],
-          bottom: TabBar(
-              isScrollable: true,
-              indicatorWeight: 4.5,
-              indicatorColor: Colors.white,
-              tabs: <Widget>[
-                Tab(
-                  text: 'Home',
-                ),
-                Tab(
-                  text: 'English Song',
-                ),
-                Tab(
-                  text: 'Hindi Song',
-                ),
-                Tab(
-                  text: 'Nepali Song',
-                )
-              ]),
         ),
         body: TabBarView(
           children: <Widget>[

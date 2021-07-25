@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ));
     return new Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Colors.purple,
-        title: Text(
-          "Welcome Page!",
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(55),
+        child: AppBar(
+          elevation: 0,
+          brightness: Brightness.dark,
+          backgroundColor: Colors.purple,
+          title: Text(
+            "Welcome Page!",
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
       ),
       body: Container(
         margin: EdgeInsets.all(20),

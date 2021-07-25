@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:musical_app/About.dart';
-import 'BouncyPageRoute.dart';
 import 'package:musical_app/Welcome.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -28,15 +27,15 @@ class NavDrawer extends StatelessWidget {
             leading: Icon(Icons.input),
             title: Text('Welcome'),
             onTap: () {
-              Navigator.push(context, BouncyPageRoute(Welcome()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Welcome()));
             },
           ),
           ListTile(
               leading: Icon(Icons.border_color),
               title: Text('Feedback'),
               onTap: () async {
-                const url =
-                    'mailto:raiumesh470@gmail.com?subject=News&body=New%20plugin';
+                const url = 'mailto:raiumesh470@gmail.com';
                 if (await canLaunch(url)) {
                   await launch(url);
                 } else {
@@ -46,7 +45,10 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.airplay),
             title: Text('About'),
-            onTap: () => {Navigator.push(context, BouncyPageRoute(About()))},
+            onTap: () => {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => About()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app),

@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
 import 'AllSongList.dart';
 import 'AllSongReaderScreen.dart';
+import 'package:flutter/services.dart';
 
 class AllSongScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ));
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        title: Text(
-          'All songs',
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(55),
+        child: AppBar(
+          elevation: 0,
+          brightness: Brightness.dark,
+          backgroundColor: Colors.purple,
+          title: Text(
+            'All songs',
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
       ),
       body: ListView.builder(
           itemCount: asongList.length,

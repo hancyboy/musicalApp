@@ -3,6 +3,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
 import 'AllSongList.dart';
+import 'package:flutter/services.dart';
 
 late WebViewController _controller;
 
@@ -12,11 +13,20 @@ class AllSongReaderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ));
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.purple,
-          title: Text(asong.title),
-          centerTitle: true,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(55),
+          child: AppBar(
+            elevation: 0,
+            brightness: Brightness.dark,
+            backgroundColor: Colors.purple,
+            title: Text(asong.title),
+            centerTitle: true,
+          ),
         ),
         body: WebView(
             initialUrl: 'about:blank',
