@@ -16,4 +16,9 @@ List<ESong> esongList = [
   ESong(title: 'Photograph', singerName: 'Ed Sheeran'),
   ESong(title: 'Happier', singerName: 'Ed Sheeran'),
   ESong(title: 'Friends', singerName: 'Annie Marie'),
+  ESong(title: 'Closer', singerName: 'The Chainsmokers'),
+  ESong(title: 'Roar', singerName: 'Katy Perry'),
+  ESong(title: 'Treat you better', singerName: 'Shawn Mendes'),
+  ESong(title: "We don't talk anymore", singerName: 'Charlie Puth'),
+  ESong(title: 'You are the reason', singerName: 'Calum Scott, Leona Lewis'),
 ];

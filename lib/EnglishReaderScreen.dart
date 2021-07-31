@@ -35,14 +35,16 @@ class EnglishReaderScreen extends StatelessWidget {
             onWebViewCreated: (WebViewController webviewController) {
               _controller = webviewController;
               if (esong.title == 'Perfect') _loadhtmlperfect();
-
               if (esong.title == 'Love Me') _loadhtmlloveMe();
-
               if (esong.title == 'Photograph') _loadhtmlphotograph();
-
               if (esong.title == 'Happier') _loadhtmlhappier();
-
               if (esong.title == 'Friends') _loadhtmlfriends();
+              if (esong.title == 'Closer') _loadhtmlcloser();
+              if (esong.title == 'Roar') _loadhtmlroar();
+              if (esong.title == 'Treat you better') _loadhtmltreatYou();
+              if (esong.title == "We don't talk anymore") _loadhtmlweDontTalk();
+              if (esong.title == 'You are the reason')
+                _loadhtmlyouAreTheReason();
             }));
   }
 }
@@ -82,6 +84,45 @@ _loadhtmlhappier() async {
 _loadhtmlfriends() async {
   String fileText =
       await rootBundle.loadString("assets/englishsong/friends.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlcloser() async {
+  String fileText =
+      await rootBundle.loadString("assets/englishsong/closer.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlroar() async {
+  String fileText = await rootBundle.loadString("assets/englishsong/roar.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmltreatYou() async {
+  String fileText =
+      await rootBundle.loadString("assets/englishsong/treatYou.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlweDontTalk() async {
+  String fileText =
+      await rootBundle.loadString("assets/englishsong/weDontTalk.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlyouAreTheReason() async {
+  String fileText =
+      await rootBundle.loadString("assets/englishsong/youAreTheReason.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());

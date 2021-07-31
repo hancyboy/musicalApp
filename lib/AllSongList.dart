@@ -15,6 +15,11 @@ List<ASong> asongList = [
   ASong(title: 'Photograph', singerName: 'Ed Sheeran'),
   ASong(title: 'Happier', singerName: 'Ed Sheeran'),
   ASong(title: 'Friends', singerName: 'Annie Marie'),
+  ASong(title: 'Closer', singerName: 'The Chainsmokers'),
+  ASong(title: 'Roar', singerName: 'Katy Perry'),
+  ASong(title: 'Treat you better', singerName: 'Shawn Mendes'),
+  ASong(title: "We don't talk anymore", singerName: 'Charlie Puth'),
+  ASong(title: 'You are the reason', singerName: 'Calum Scott, Leona Lewis'),
 
   //Hindi songs
   ASong(title: 'Channa Mereya', singerName: 'Arjit Singh'),
