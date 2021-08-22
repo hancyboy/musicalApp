@@ -51,6 +51,12 @@ class AllSongReaderScreen extends StatelessWidget {
               if (asong.title == 'Kabira') _loadhtmlkabira();
               if (asong.title == 'Namo Namo') _loadhtmlnamoNamo();
               if (asong.title == 'Humdard') _loadhtmlhumdard();
+              if (asong.title == 'Ae Dil Hai Muskil') _loadhtmlaeDil();
+              if (asong.title == 'Humari Adhuri Kahaani')
+                _loadhtmlhumariAdhuri();
+              if (asong.title == 'Jeena Jeena') _loadhtmljeenajeena();
+              if (asong.title == 'Samjhawa') _loadhtmlsamjhawa();
+              if (asong.title == 'Teri Mitti') _loadhtmlteriMitti();
 
               //Nepali songs
               if (asong.title == 'Behos') _loadhtmlbehos();
@@ -58,6 +64,12 @@ class AllSongReaderScreen extends StatelessWidget {
               if (asong.title == 'Sathi') _loadhtmlsathi();
               if (asong.title == 'Lajayera') _loadhtmllajayera();
               if (asong.title == 'Teenpatey') _loadhtmlteenpatey();
+              if (asong.title == 'Aama') _loadhtmlaama();
+              if (asong.title == 'Hataaridai Bataasidai') _loadhtmlkataKata();
+              if (asong.title == 'Maya') _loadhtmlmaya();
+              if (asong.title == 'Samhaalincha Kahile Man')
+                _loadhtmlsamhalinxa();
+              if (asong.title == 'Ko Hou Timi') _loadhtmlkoHouTimi();
             }));
   }
 }
@@ -182,6 +194,45 @@ _loadhtmlnamoNamo() async {
       .toString());
 }
 
+_loadhtmlaeDil() async {
+  String fileText = await rootBundle.loadString("assets/hindisong/aeDil.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlhumariAdhuri() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/humariAdhuri.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmljeenajeena() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/jeenajeena.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlsamjhawa() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/samjhawa.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlteriMitti() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/teriMitti.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
 //Nepali songs
 _loadhtmlbehos() async {
   String fileText = await rootBundle.loadString("assets/nepalisong/behos.html");
@@ -215,6 +266,44 @@ _loadhtmllajayera() async {
 _loadhtmlteenpatey() async {
   String fileText =
       await rootBundle.loadString("assets/nepalisong/teenpatey.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlaama() async {
+  String fileText = await rootBundle.loadString("assets/nepalisong/aama.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlkataKata() async {
+  String fileText =
+      await rootBundle.loadString("assets/nepalisong/kataKata.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlmaya() async {
+  String fileText = await rootBundle.loadString("assets/nepalisong/maya.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlsamhalinxa() async {
+  String fileText =
+      await rootBundle.loadString("assets/nepalisong/samhalinxa.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlkoHouTimi() async {
+  String fileText =
+      await rootBundle.loadString("assets/nepalisong/koHouTimi.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());

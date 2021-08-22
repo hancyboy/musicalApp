@@ -43,6 +43,17 @@ class HindiReaderScreen extends StatelessWidget {
               if (hsong.title == 'Namo Namo') _loadhtmlnamoNamo();
 
               if (hsong.title == 'Humdard') _loadhtmlhumdard();
+
+              if (hsong.title == 'Ae Dil Hai Muskil') _loadhtmlaeDil();
+
+              if (hsong.title == 'Humari Adhuri Kahaani')
+                _loadhtmlhumariAdhuri();
+
+              if (hsong.title == 'Jeena Jeena') _loadhtmljeenajeena();
+
+              if (hsong.title == 'Samjhawa') _loadhtmlsamjhawa();
+
+              if (hsong.title == 'Teri Mitti') _loadhtmlteriMitti();
             }));
   }
 }
@@ -81,6 +92,45 @@ _loadhtmlhumdard() async {
 _loadhtmlnamoNamo() async {
   String fileText =
       await rootBundle.loadString("assets/hindisong/namoNamo.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlaeDil() async {
+  String fileText = await rootBundle.loadString("assets/hindisong/aeDil.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlhumariAdhuri() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/humariAdhuri.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmljeenajeena() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/jeenajeena.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlsamjhawa() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/samjhawa.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlteriMitti() async {
+  String fileText =
+      await rootBundle.loadString("assets/hindisong/teriMitti.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());

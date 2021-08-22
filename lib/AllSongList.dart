@@ -27,6 +27,11 @@ List<ASong> asongList = [
   ASong(title: 'Kabira', singerName: 'Rekha Bhardwaj, Tochi Raina'),
   ASong(title: 'Namo Namo', singerName: 'Kedarnath'),
   ASong(title: 'Humdard', singerName: 'Arjit Singh'),
+  ASong(title: 'Ae Dil Hai Muskil', singerName: 'Arjit Singh'),
+  ASong(title: 'Humari Adhuri Kahaani', singerName: 'Arjit Singh'),
+  ASong(title: 'Jeena Jeena', singerName: 'Atif Aslam'),
+  ASong(title: 'Samjhawa', singerName: 'Arjit Singh'),
+  ASong(title: 'Teri Mitti', singerName: 'B Praak'),
 
   //Nepali songs
   ASong(title: 'Behos', singerName: 'Sushant Kc'),
@@ -34,4 +39,9 @@ List<ASong> asongList = [
   ASong(title: 'Budi', singerName: '5:55'),
   ASong(title: 'Lajayera', singerName: 'Sujan Chapagain'),
   ASong(title: 'Teenpatey', singerName: 'Sujan chapagain, Bidhya Tiwari'),
+  ASong(title: 'Aama', singerName: 'Yama Buddha'),
+  ASong(title: 'Hataaridai Bataasidai', singerName: 'Sajan Raj Vaidya'),
+  ASong(title: 'Maya', singerName: 'Ayush Gauchan'),
+  ASong(title: 'Ko Hou Timi', singerName: 'Karma Band'),
+  ASong(title: 'Samhaalincha Kahile Man', singerName: 'Sugam Pokhrel'),
 ];

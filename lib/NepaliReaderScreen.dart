@@ -42,6 +42,17 @@ class NepaliReaderScreen extends StatelessWidget {
               if (nsong.title == 'Lajayera') _loadhtmllajayera();
 
               if (nsong.title == 'Teenpatey') _loadhtmlteenpatey();
+
+              if (nsong.title == 'Aama') _loadhtmlaama();
+
+              if (nsong.title == 'Hataaridai Bataasidai') _loadhtmlkataKata();
+
+              if (nsong.title == 'Maya') _loadhtmlmaya();
+
+              if (nsong.title == 'Samhaalincha Kahile Man')
+                _loadhtmlsamhalinxa();
+
+              if (nsong.title == 'Ko Hou Timi') _loadhtmlkoHouTimi();
             }));
   }
 }
@@ -78,6 +89,44 @@ _loadhtmllajayera() async {
 _loadhtmlteenpatey() async {
   String fileText =
       await rootBundle.loadString("assets/nepalisong/teenpatey.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlaama() async {
+  String fileText = await rootBundle.loadString("assets/nepalisong/aama.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlkataKata() async {
+  String fileText =
+      await rootBundle.loadString("assets/nepalisong/kataKata.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlmaya() async {
+  String fileText = await rootBundle.loadString("assets/nepalisong/maya.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlsamhalinxa() async {
+  String fileText =
+      await rootBundle.loadString("assets/nepalisong/samhalinxa.html");
+  _controller.loadUrl(Uri.dataFromString(fileText,
+          mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
+      .toString());
+}
+
+_loadhtmlkoHouTimi() async {
+  String fileText =
+      await rootBundle.loadString("assets/nepalisong/koHouTimi.html");
   _controller.loadUrl(Uri.dataFromString(fileText,
           mimeType: 'text/html', encoding: Encoding.getByName('utf-8'))
       .toString());
